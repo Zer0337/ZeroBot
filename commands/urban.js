@@ -18,8 +18,9 @@ exports.run = (client, message, args) => {
 };
 message.channel.send({ embed });
   } else {
+    var uppercaseD = definition.charAt(0).toUpperCase();
     const embed = {
-      "title": "Urban Definition for: " + definition,
+      "title": "Urban Definition for " + uppercaseD,
       "description": "[Link](https://www.urbandictionary.com/define.php?term=" + definition + ")",
       "color": 16711684,
       "footer": {
@@ -28,7 +29,7 @@ message.channel.send({ embed });
       "fields": [
         {
           "name": "Word/Phrase",
-          "value": entries[0].word
+          "value": uppercaseD
         },
         {
           "name": "Definition",
