@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
 message.channel.send({ embed });
   } else {
     const embed = {
-      "title": "Urban Definition for: definition" + ,
+      "title": "Urban Definition for: " + definition,
       "description": "[Link](https://www.urbandictionary.com/define.php?term=" + definition + ")",
       "color": 16711684,
       "footer": {
