@@ -6,7 +6,8 @@ exports.run = (client, message, args) => {
   message.channel.startTyping();
   ud.term(definition, (error, entries, tags, sounds) => {
   if (error) {
-    console.error(error.message)
+    console.error("Error: " + error.message)
+    message.channel.send("That word is undefined.")
   } else {
     message.channel.send(entries[0].definition)
   }
