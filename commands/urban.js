@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
     "text": "ZeroBot, Powering Zero's Den"
   }
 };
-channel.send({ embed });
+message.channel.send({ embed });
     // message.channel.send(entries[0].definition)
   }
 })
