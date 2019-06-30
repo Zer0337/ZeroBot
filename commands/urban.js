@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
     message.channel.send("That word is undefined.")
   } else {
     const embed = {
-  "title": "Urban definition for: " + args.toString,
+  "title": "Urban definition for: " + definition,
   "description": entries[0].definition,
   "color": 16711684,
   "footer": {
