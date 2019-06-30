@@ -19,14 +19,28 @@ exports.run = (client, message, args) => {
 message.channel.send({ embed });
   } else {
     const embed = {
-  "title": "Urban definition for: " + definition,
-  "description": entries[0].definition,
-  "color": 16711684,
-  "footer": {
-    "text": "ZeroBot, Powering Zero's Den"
-  }
-};
-message.channel.send({ embed });
+      "title": "Urban Definition",
+      "description": "[link](https://www.urbandictionary.com/define.php?term=" + definition + ")",
+      "color": 16711684,
+      "footer": {
+        "text": "ZeroBot, Powering Zero's Den"
+      },
+      "fields": [
+        {
+          "name": "Word",
+          "value": entries[0].word
+        },
+        {
+          "name": "Definition",
+          "value": entries[0].definition
+        },
+        {
+          "name": "Examples",
+          "value": entries[0].example
+        }
+      ]
+    };
+    message.channel.send({ embed });
     // message.channel.send(entries[0].definition)
   }
 })
