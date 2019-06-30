@@ -9,8 +9,8 @@ exports.run = (client, message, args) => {
     console.error(error.message)
   } else {
     message.channel.send(entries[0].definition)
-    channel.stopTyping();
   }
 })
+channel.stopTyping();
 
 }
