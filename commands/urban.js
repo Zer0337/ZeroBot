@@ -2,7 +2,7 @@
 const ud = require('urban-dictionary')
 
 exports.run = (client, message, args) => {
-  var definition = args
+  var definition = args.toString
 
   ud.term(definition, (error, entries, tags, sounds) => {
   if (error) {
