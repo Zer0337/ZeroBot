@@ -1,13 +1,15 @@
-var urban = require("urban");
+'use strict'
+const ud = require('urban-dictionary')
 
 exports.run = (client, message, args) => {
-  message.channel.send("Urban Definition of " + args + ":")
-    if(args == "") {
-	    var target = urban.random();
-      message.channel.send(target);
-    }
-    else {
-      var target = urban(args)
-      message.channel.send(target);
-    }
+  var definition = args
+
+  ud.term(definition, (error, entries, tags, sounds) => {
+  if (error) {
+    console.error(error.message)
+  } else {
+    message.channel.send(entries[0].definition)
+  }
+})
+
 }
