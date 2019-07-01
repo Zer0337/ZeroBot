@@ -10,6 +10,6 @@ const embed = {
     "text": "ZeroBot, Powering Zero's Den"
   }
 };
-channel.send({ embed });
+message.channel.send({ embed });
 
 }
