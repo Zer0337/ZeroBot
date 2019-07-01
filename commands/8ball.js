@@ -14,7 +14,7 @@ if(args = "") {
 message.channel.send({ embed });
 }
 
-if(args > 1)
+if(args > 1) {
 const embed = {
   "description": eightballAnswers[eightBallAnswersIndex],
   "footer": {
