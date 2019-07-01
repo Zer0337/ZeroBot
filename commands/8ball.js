@@ -4,7 +4,17 @@ const eightballAnswers = ["Very doubtful.", "Concentrate and ask again.", "Signs
 
 const eightBallAnswersIndex = Math.floor(Math.random() * eightballAnswers.length);
 
-if(args > 1) {
+if(args = "") {
+  const embed = {
+    "description": "Are you asking me a question? -_-",
+    "footer": {
+      "text": "ZeroBot, Powering Zero's Den"
+    }
+  };
+message.channel.send({ embed });
+}
+
+if(args > 1)
 const embed = {
   "description": eightballAnswers[eightBallAnswersIndex],
   "footer": {
@@ -12,15 +22,6 @@ const embed = {
   }
 };
 message.channel.send({ embed });
-}
-else if (args < 1){
-  const embed = {
-    "description": "Are you asking me a question? -_-",
-    "footer": {
-      "text": "ZeroBot, Powering Zero's Den"
-    }
-  };
-  message.channel.send({ embed });
 }
 
 }
