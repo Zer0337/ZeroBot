@@ -5,7 +5,7 @@ const eightballAnswers = ["Very doubtful.", "Concentrate and ask again.", "Signs
 const eightBallAnswersIndex = Math.floor(Math.random() * eightballAnswers.length);
 
 const embed = {
-  "description": eightBallAnswersIndex,
+  "description": eightballAnswers[eightBallAnswersIndex],
   "footer": {
     "text": "ZeroBot, Powering Zero's Den"
   }
